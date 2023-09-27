@@ -1,0 +1,35 @@
+[
+  {
+    "model": "main.subscription",
+    "pk": 28,
+    "fields": {
+      "blog": 3,
+      "user": 2,
+      "status": true,
+      "payment_status": true,
+      "payment_date": "2023-09-22"
+    }
+  },
+  {
+    "model": "main.subscription",
+    "pk": 29,
+    "fields": {
+      "blog": 1,
+      "user": 2,
+      "status": true,
+      "payment_status": true,
+      "payment_date": "2023-09-22"
+    }
+  },
+  {
+    "model": "main.subscription",
+    "pk": 30,
+    "fields": {
+      "blog": 2,
+      "user": 2,
+      "status": true,
+      "payment_status": true,
+      "payment_date": "2023-09-22"
+    }
+  }
+]
