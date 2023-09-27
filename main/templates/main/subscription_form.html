@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center">
+            <div class="bg-light p-5 rounded mt-3">
+                <h1>Подписка на блог:</h1>
+                <p class="lead">{{ blog.title }}</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-group text-center">
+                    <button class="btn btn-success mt-3" type="submit">Подписаться</button>
+                    <a href="{% url 'blog:blog_list' %}"
+                       class="btn btn-warning mt-3">Отменить</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

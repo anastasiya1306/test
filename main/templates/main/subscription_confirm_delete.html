@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center">
+            <div class="bg-light p-5 rounded mt-3">
+                <h1>Уверены, что хотите удалить подписку?</h1>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group text-center">
+                        <button class="btn btn-danger mt-3" type="submit">Удалить</button>
+                        <a href="{% url 'main:subscription_list' %}"
+                           class="btn btn-success mt-3">Отменить</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
